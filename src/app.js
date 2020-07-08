@@ -7,7 +7,7 @@ const { serialize } = require("v8");
 
 const app = express();
 // port equals to 3000 if it doesnt exist but if on heroku it exists and it will be set to it
-const port = proccess.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 // Define paths for express config
 const publicDirectoryPath = path.join(__dirname, "../public");
