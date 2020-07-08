@@ -6,6 +6,8 @@ const forecast = require(`./utils/forecast`);
 const { serialize } = require("v8");
 
 const app = express();
+// port equals to 3000 if it doesnt exist but if on heroku it exists and it will be set to it
+const port = proccess.env.PORT || 3000;
 
 // Define paths for express config
 const publicDirectoryPath = path.join(__dirname, "../public");
@@ -102,6 +104,6 @@ app.get(`*`, (req, res) => {
 });
 
 // Starting server on port 3000
-app.listen(3000, () => {
-  console.log(`Server is up on port 3000.`);
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}.`);
 });
