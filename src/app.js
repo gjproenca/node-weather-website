@@ -3,7 +3,6 @@ const express = require(`express`);
 const hbs = require(`hbs`);
 const geocode = require(`./utils/geocode.js`);
 const forecast = require(`./utils/forecast`);
-const { serialize } = require("v8");
 
 const app = express();
 // port equals to 3000 if it doesnt exist but if on heroku it exists and it will be set to it
